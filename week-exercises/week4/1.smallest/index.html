@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smallest</title>
+</head>
+<body>
+    
+<script>
+    var a = window.prompt("Enter first number : ");
+    var b = window.prompt("Enter second number : ");
+    function smallestOrSquare(a,b){
+        x = parseInt(a);
+        y = parseInt(b)
+        if (x==y){
+            return `square of ${a} is `+ a*a;
+        }
+        else if(a>b){
+            return `smallest number between ${a} and ${b} is : `+ b
+        }
+        else{
+            return `smallest number between ${a} and ${b} is : `+ a
+        }
+    }
+    document.write(`<h1>${smallestOrSquare(a,b)}</h1>`);
+    
+</script>
+
+</body>
+</html>
