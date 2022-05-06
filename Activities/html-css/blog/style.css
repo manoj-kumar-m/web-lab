@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    background-color: deeppink;
+}
+.blog-header{
+    background-color: yellow;
+}
+.blog-heading{
+    text-align: center;
+}   
+
+.body{
+    background-color: #fff;
+    display: flex;
+    text-align: left;
+    padding: 20px;
+    height: 90%;
+}
+.menu{
+    padding: 20px;
+}
+
+.footer{
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: blue;
+}
+ul{
+    padding-top: 10px ;
+}
+li{
+    list-style: none;
+}
+
+.main{
+    margin-left: 50px;
+    border-left: 1px solid green;
+
+}
+
+.main-div{
+    padding: 20px;
+}
+
+.main-h, .main-div p{
+padding-bottom: 25PX;
+}
+
+.main-aside{
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    border: 3px dotted green;
+}

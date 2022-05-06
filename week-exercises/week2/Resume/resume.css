@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    font-family: sans-serif;
+    overflow-x:hidden ;
+}
+.container{
+    height: 100%;
+    width: 100vw;
+    background-color: rgb(255, 243, 227);
+    
+}
+
+.header{
+
+    overflow: hidden;
+    display: flex;
+    margin: 0 10%;
+    flex-direction: column;
+    text-align: center;
+}
+
+.header h1{
+    font-size: 24px;
+    margin: 10px 0;
+}
+.header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+li{
+ 
+    text-align: center;
+    margin-right: 50px;
+    margin-bottom: 30px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color: red;
+}
+
+p{
+    font-size: 14px;
+}
+li{
+    font-size: 14px;
+}
+
+/* ------------------------------------------------------------- */
+
+
+/* ---------------------main --------------------------- */
+
+.main-body{
+    margin: 0 10%;
+
+}
+
+.main-body h4{
+    border-bottom: 2px solid black;
+}
+
+
+.edu-heading{
+    display: flex;
+    justify-content: space-between;
+}
+.edu-container{
+    padding: 10px 0;
+}
+
+
+.skill-container{
+    display: flex;
+    padding: 5px 0;
+}
+
+.education{
+    margin-bottom: 10px;
+}
+.skills{
+    margin-bottom: 20px;
+}
+
+.italy{
+    font-size: 14px;
+}
+
+.proj-name{
+    margin-top: 10px;
+    font-size: 15px;
+}
+.proj-ul{
+    margin-left: 12px;
+    margin-bottom: 10px
+}
+.proj-list{
+    text-align: left;
+    margin: 5px;
+}
+
+.interests{
+    margin-top: 30px;
+}
+
+.interest-ul{
+    display: flex;
+    margin-left: 20px;
+    align-items: center;
+    text-align: left;
+    margin-top: 5px;
+
+}
+.interest-li{
+    margin-bottom: 10px;
+}
+.languages{
+    margin-top: 20px;
+}
+
+
+.footer{
+    padding: 20px 0;
+}
+.para{
+    text-align: center;
+}

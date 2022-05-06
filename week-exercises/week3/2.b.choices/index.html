@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top-Choices</title>
+</head>
+<body>
+
+    <script>
+        var color = ['red', 'green', 'blue', 'white', 'black'];
+        color.map(i => {
+            console.log(`My #${color.indexOf(i)+1} choice is ${i}`)
+        });
+        const suffix = (i) =>{
+            var j = i%10;
+            var k = i%100;
+            if (j==1 && k!=11){
+                return i+"st";
+            }
+            if (j==2 && k!=22){
+                return i+"nd";
+            }
+            if (j==3 && k!=33){
+                return i+"rd";
+            }
+            return i+"th";
+        }
+        console.log("After deleting the suffix \n");
+        color.map(i=>{
+            console.log(`My ${suffix(color.indexOf(i)+1)} choice is ${i}`);
+        })
+    </script>
+    
+</body>
+</html>

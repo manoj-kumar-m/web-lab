@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="name">Enter Name : </label>
+    <input type="text" name = "name" id="name"><br>
+    <label for="password">Enter age : </label>
+    <input type="number" name = "age" id="age"><br>
+    <label for="town">Enter hometown : </label>
+    <input type="text" name = "hometown" id = "hometown"><br>
+    <button type="" onclick="handleClick()">Click</button>
+    <p id="year"></p>
+    <p id="home1"></p>
+    <a href="" id="home2" target="_blank"></a>
+
+    <script>
+        const handleClick = () =>{
+            var age = document.getElementById('age').value;
+            var hometown = document.getElementById('hometown').value;
+            var cur = new Date().getFullYear();
+            document.getElementById('year').innerHTML='Age : '+age.toString()+" year : "+(cur-age).toString();
+            document.getElementById('home1').innerHTML = hometown;
+            document.getElementById('home2').href = "https://www.google.com/maps/place/"+hometown ;
+            document.getElementById('home2').innerHTML = 'Link to ur hometown'
+        }
+    </script>
+</body>
+</html>

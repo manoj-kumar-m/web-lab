@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mixUp</title>
+</head>
+<body>
+
+    <script>
+        var a = window.prompt("Enter first string : ");
+        var b = window.prompt("Enter second string : ");
+        function mixUp(a,b){
+            return ( b.slice(0,2) + a.slice(2,a.length) + " " + a.slice(0,2) + b.slice(2,b.length))
+        }
+        document.write(`<h1>${mixUp(a,b)}</h1>`);
+    </script>
+    
+</body>
+</html>

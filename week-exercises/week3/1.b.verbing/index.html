@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verbing</title>
+</head>
+<body>
+    <script>
+        var ing;
+        var a = window.prompt("Enter a String : ");
+        function addIng(a){
+            if (a.length>=3){
+                if (a.slice(a.length-3)==='ing'){
+                    a=a+"ly";
+                }
+                else{
+                    a = a+"ing";
+                }
+            }
+            return a
+        }
+        ing = addIng(a);
+        document.write(`<h2>${ing}</h2>`);
+    </script>
+</body>
+</html>
