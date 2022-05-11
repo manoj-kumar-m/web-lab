@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var numbers = [1,2,3,0,0,-1,-2];
+        const counter = (numbers) => {
+            var i;
+            var count = {
+                    negative: 0,
+                    zero: 0,
+                    positive: 0
+                };
+            console.log(numbers)
+            for (i = 0; i < numbers.length; i++) {
+                switch (true) {
+                    case numbers[i] < 0:
+                        console.log(numbers[i])
+                        count.negative++;
+                        break;
+
+                    case (numbers[i] == 0):
+                        count.zero++;
+                        break;
+
+                    case (numbers[i] > 0):
+                        count.positive++;
+                        break;
+                }
+            }
+            console.log(count);
+            return count
+        };
+        const res = counter(numbers);
+        document.write(`<h1>Number of Negative Numbers are ${res.negative}</h1>`);
+        document.write(`<h1>Number of Zeros are ${res.zero}</h1>`);
+        document.write(`<h1>Number of Positive Numbers are ${res.positive}</h1>`);
+
+    </script>
+
+
+
+    </body>
+</html>
