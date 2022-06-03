@@ -1,14 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
-</head>
-<body>
+    <title>Week 6</title>
     <script>
-        
+        function calculator(num) {
+            this.num = num;
+        }
+        calculator.prototype.add = function (n) {
+            this.num += n;
+            return this;
+        };
+        calculator.prototype.subtract = function (n) {
+            this.num -= n;
+            return this;
+        };
+        calculator.prototype.getAnswer = function () {
+            return this.num;
+        };
+        console.log(
+            new calculator(2)
+                .add(2)
+                .add(2)
+                .subtract(3)
+                .getAnswer()
+        );
     </script>
-</body>
+</head>
+
+<body></body>
+
 </html>
