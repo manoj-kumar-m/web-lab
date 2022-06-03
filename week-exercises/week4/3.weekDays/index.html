@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeekDays</title>
+</head>
+
+<body>
+    <script>
+        var n;
+        var getName;
+
+        const change = (t) => {
+            n = t
+            getName = weekDays(n)
+        }
+        const weekDays = (num) => {
+            const weeks = {
+                1: "Monday",
+                2: "Tuesday",
+                3: "Wednesday",
+                4: "Thursday",
+                5: "Friday",
+                6: "Saturday",
+                7: "Sunday"
+            }
+            return () => {
+                document.getElementById("name").innerText = weeks[num]
+            }
+        }
+    </script>
+
+    <h1>Enter week number : </h1>
+    <input type="number" id="pass" max="7" min="1" onchange = "change(this.value)">
+    <button onclick="getName()">Validate</button>
+    <h2 id="name"></h2>
+
+</body>
+
+</html>

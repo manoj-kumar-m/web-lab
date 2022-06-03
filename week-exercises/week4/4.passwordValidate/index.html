@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Validate</title>
+</head>
+<body>
+    <script>
+        var a, b, c;
+        var d = "password";
+        const change = (t)=>{
+            c = t
+            b = checkPass()
+        }
+        const checkPass = () =>{
+            return ()=>{
+                if (c==d){
+                    document.getElementById("success").innerText = "Validation Successful";
+                }
+                else{
+                    a = window.prompt("Ur Fav Color?");
+                    if (a=="blue"){
+                        document.getElementById("success").innerText = "Validation Successful"
+                    }
+                    else{
+                        document.getElementById("success").innerText = "Validation UnSuccessful"
+                    }
+                }
+            }
+        }
+    </script>
+
+    <h1>Enter password : </h1>
+    <input type="password" id = "pass" onchange="change(this.value)">
+    <button onclick="b()">Validate</button>
+    <h2 id="success"></h2>
+
+</body>
+</html>

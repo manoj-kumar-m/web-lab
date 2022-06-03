@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Vs Global</title>
+</head>
+<body>
+    <script>
+        var a = 5;
+        const testFunc = ()=>{
+            var a = 7;
+            console.log(a)
+            a = a+1
+            console.log(a)
+        }
+        testFunc()
+        console.log(a)
+    </script>
+</body>
+</html>
