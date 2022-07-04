@@ -14,11 +14,11 @@
     const smallestOrSquare = (x,y)=>{
        var z;
        (x==y)?z = x*x : z = Math.min(x,y)
-       c = z
+       c = z // c is global as not declared with var
     
     }
     smallestOrSquare(a,b)
-    document.write(`<h1>${c}</h1>`);
+    document.write(`<h1>${c}</h1>`); // global c is called
     
 </script>
 
