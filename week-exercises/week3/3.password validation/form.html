@@ -17,7 +17,7 @@
         
                 
             <label>Username :</label>
-            <input type="text" placeholder="Full Name"><br>
+            <input id="usr" type="text" placeholder="Full Name"><br>
         
                 
             <label>Password :</label>
@@ -29,11 +29,11 @@
         
                 
             <label>Year of birth :</label>
-            <input type="date" placeholder="Full Name"> <br>
+            <input id="dob" type="date" placeholder="Full Name"> <br>
         
                 
             <label>Email :</label>
-            <input type="email" placeholder="Full Name" ><br>
+            <input id="email" type="email" placeholder="Full Name" ><br>
         
                 
             <button onclick="validation()">click</button>
@@ -46,15 +46,31 @@
         const validation = () =>{
             var pwd = document.getElementById('pwd').value;
             var conpwd = document.getElementById('conpwd').value;
-        
+            var usr = document.getElementById("usr").value;
+            var mail = document.getElementById("email").value;
+            var dob = parseInt(document.getElementById("dob").value);
+            var reg = /^([a-zA-Z0-9_\-\.])+\@([a-zA-Z_\-\.])+\.([a-zA-Z]{2,4})$/;
             if (pwd !== conpwd){
                 alert('Password doesnot Matched')
                 return true;
             }
-            else{
-                alert('Password match')
-                return false;
+            else if (usr == "" || pwd == "" || conpwd == "" || mail == "") {
+                alert("Empty fields found");
+                return true;
             }
+            else if (reg.test(mail) == false) {
+                alert("Invalid Email Address");
+                return true;
+            }
+            else if (dob > 2000 || dob < 1900) {
+                alert("Inavalid year of birth");
+                return true;
+            }
+            else{
+                alert("Form Validated");
+                return true;
+            }
+
         }
     </script>
 </body>
