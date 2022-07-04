@@ -18,12 +18,12 @@
         const display=(r)=>{
             var str = "";
             r.ingredients.map((i)=>{
-                str = str + `<li>${i}</li>`
+                str += `<li>${i}</li>`
             })
             document.write(`<ul>
                 <li>${r.title}</li>
                 <li>serves : ${r.serves}</li>
-                <li>ingredients : </li>`+str);
+                <li>ingredients : </li>`+str+'</ul>');
         }
         display(recipe)
     </script>
