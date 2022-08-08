@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+	<script type="text/javascript">
+		function calculator(num)
+		{
+			this.num=num
+		}
+		calculator.prototype.Add=function(n)
+		{
+			this.num+=n
+			return this
+		}
+		calculator.prototype.subtract=function(n)
+		{
+			this.num-=n
+			return this
+		}
+		calculator.prototype.getAnswer=function()
+		{
+			return this.num
+		}
+
+		var ans = new calculator(2).Add(2).Add(2).subtract(3).getAnswer()
+		console.log(ans)
+        document.write("<h3>answer = "+ans+"</h3>")
+	</script>
+</head>
+</html>

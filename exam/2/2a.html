@@ -1,0 +1,54 @@
+<!-- 2.		(a)	Write a java script program to convert   month number to month name using closures.
+•	If the user enters a number less than 1 or greater than 12 or a non-number, have the function write "Bad Number" in the monthName field.
+•	If the user enters a decimal between 1 and 12 (inclusive), strip the decimal portion of the number. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    Enter the month number:<input type="text" required id="inText" /><br />
+    <button onclick="sbtBtn()">Translate</button><br />
+    <div id="result"></div>
+    <script>
+        function findMonth(n) {
+            var months = [
+                "January",
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July",
+                "August",
+                "September",
+                "October",
+                "November",
+                "December",
+            ];
+
+            const month = () => {
+                if (isNaN(n) || n < 1 || n >= 13) {
+                    return "Bad Number";
+                }
+                return months[Math.floor(n - 1)];
+            };
+            return month;
+        }
+
+        function sbtBtn() {
+            var n = document.getElementById("inText").value;
+            var m = findMonth(n);
+            var ans = m()
+            document.getElementById("result").innerHTML = ans;
+        }
+    </script>
+</body>
+
+</html>
