@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../react/react.development.js"></script>
+    <script src="../react/react-dom.development.js"></script>
+    <script src="../react/prop-types.js"></script>
+    <script src="../react/axios.min.js"></script>
+    <script src="../react/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <div id="result"></div>
+    <script type="text/babel">
+        const names = ['bob','john','manu', 'ram']
+        const addresses = ['a','b','c','d','e','f']
+        class App extends React.Component{
+            constructor(props){
+                super(props)
+                this.state = {
+                    name : "doe",
+                    address : 'x',
+                    company : 'inc'
+                }
+            }
+            handleChange = ()=>{
+                this.setState({
+                    name : names[Math.floor(Math.random() * names.length)],
+                    address : addresses[Math.floor(Math.random() * addresses.length)]
+                })
+            }
+            render(){
+                return(
+                    <div>
+                        <h1>Employee Details</h1>
+                        <p>Emp Name : {this.state.name}</p>    
+                        <p>Address : {this.state.address}</p>    
+                        <p>Company Name : {this.state.company}</p>
+                        <button type="submit" onClick = {this.handleChange}>Change</button>    
+                    </div>
+                )
+            }
+        }
+        ReactDOM.render(<App/>,document.getElementById('root'));
+    </script>
+</body>
+</html>
