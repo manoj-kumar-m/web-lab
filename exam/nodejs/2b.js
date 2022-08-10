@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html');
+    res.sendFile(__dirname + '/2b.html');
 });
 
 app.get("/getData", (req, res) => {
@@ -46,6 +46,7 @@ app.get("/showData", (req, res) => {
             process.exit(1);
         }
         var collection = db.collection('students');
+        // collection.deleteMany(query, (err, result) => {
         collection.find(query).toArray((err, result) => {
             if (err) {
                 console.log(err);
