@@ -1,3 +1,7 @@
+// 5(b)	Write a  Node.js Express and Mongo  program to accept ‘Student’ information viz. Name, USN, Dept, Grade from a web page and store the 
+// information in a database and update Student grade  with the name specified by the user and display the results.
+
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongo = require('mongodb').MongoClient;
@@ -19,7 +23,7 @@ app.post("/addData", (req, res) => {
     var gradePat = /^[a-fA-FsS]$/
     req.checkBody('name', 'Name should be Charecter').isAlpha();
     req.checkBody('usn', 'USN should be valid').matches(usnPar);
-    req.checkBody('grade', 'Grade should be between A and F or S').matches(gradePat);
+    req.checkBody('grade', 'Grade should be between A and F').matches(gradePat);
     var err = req.validationErrors();
     if (err) {
         return res.send(err);
@@ -44,28 +48,28 @@ app.post("/addData", (req, res) => {
 
 app.get("/viewData", (req, res) => {
     var name = req.query.name;
+    var grade = req.query.grade
+    var query = { name: name }
+    var change = { $set: { grade } } 
     mongo.connect(url, (err, db) => {
         if (err) {
             console.log(err);
             process.exit(1);
         }
         var collection = db.collection('students');
-        collection.find({ name: name }).toArray((err, result) => {
+        collection.updateOne(query, change, (err, result) => {
             if (err) {
                 console.log(err);
                 process.exit(1);
             }
-            if (result.length == 0) {
+            if (result.nModified == 0) {
                 return res.send("No Record Found");
             }
-            var text = "<h2>Student Details</h2> <br>";
-            text += "Name : " + result[0].name + "<br>";
-            text += "USN : " + result[0].usn + "<br>";
-            text += "Grade : " + result[0].grade + "<br>";
-            text += "Department : " + result[0].dept + "<br>";
-            res.header("content-type", "text/html");
+            var text = "Record Updated<br>";
+            text += "Name: " + name + "<br>";
+            text += "Grade: " + grade + "<br>";
             res.send(text);
-        });
+        })
     })
 })
 

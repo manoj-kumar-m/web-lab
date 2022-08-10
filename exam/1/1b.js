@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
 
 app.get("/getData", (req, res) => {
     var data = req.query;
-    data.marks = parseInt(data.marks);
+    data.marks = data.marks ? parseInt(data.marks) : 0;
     console.log(data);
     // Must use mongodb only in exam also
     mongo.connect(url, (err, db) => {
