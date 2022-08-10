@@ -12,7 +12,17 @@ function pop(arr) {
     return arr;
 }
 
+function top(arr) {
+    return arr[arr.length-1]
+}
+
+function size(arr) {
+    return arr.length
+}
+
 module.exports = {
     push,
     pop,
+    top,
+    size
 };

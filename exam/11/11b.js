@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html');
+    res.sendFile(__dirname + '/11b.html');
 });
 
 app.post("/addData", (req, res) => {

@@ -2,10 +2,10 @@
   "name": "nodejs",
   "version": "1.0.0",
   "description": "lab exam nodejs",
-  "main": "5b.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node 5b.js"
+    "start": "node index.js"
   },
   "author": "Manoj Kumar M",
   "license": "ISC",
