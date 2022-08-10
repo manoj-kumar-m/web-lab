@@ -3,7 +3,7 @@
 
 const express = require('express');
 const bodyParser = require('body-parser');
-const { json } = require('body-parser');
+// const { json } = require('body-parser');
 const mongo = require('mongodb').MongoClient;
 const app = express();
 const url = 'mongodb://127.0.0.1:27017/cie_marks';
